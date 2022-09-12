@@ -5,11 +5,15 @@ import './Main.css';
 import backgroundImg from '../../background.png';
 
 export default function Main() {
-  <main style={{ backgroundImage: `url(${backgroundImg})` }}>
-    {animals.map((animal) => (
-      <Animal 
-        key={animal.name}
-      />
-    ))}
-  </main>;
+  return (
+    <main style={{ backgroundImage: `url(${backgroundImg})` }}>
+      {animals.map((animal) => (
+        <Animal 
+          key={animal.name} 
+          type={animal.type}
+          says={animal.says}
+        />
+      ))}
+    </main>
+  );
 }
